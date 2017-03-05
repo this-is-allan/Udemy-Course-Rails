@@ -3,7 +3,8 @@ class Ad < ApplicationRecord
   belongs_to :member
 
   # Scopes
-  scope :last_six, -> { limit(6).order(created_at: :desc) }
+  scope :descending_order, ->(quantity = 6) { limit(quantity).order(created_at: :desc) }
+  scope :to_the, ->(member) { where(member: member) }
 
   # gem paperclip
   has_attached_file :picture, styles: { medium: "320x150#", thumb: "100x100>" }, default_url: "/images/:style/missing.png"

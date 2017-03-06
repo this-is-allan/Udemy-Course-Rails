@@ -24,6 +24,8 @@ gem 'pundit'
 gem 'money-rails', '~>1'
 # Easy file attachment management for ActiveRecord
 gem "paperclip", "~> 5.0.0"
+# jQuery UI for the Rails asset pipeline
+gem 'jquery-ui-rails'
 
 
 source 'https://rails-assets.org' do

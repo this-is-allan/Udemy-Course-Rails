@@ -15,8 +15,6 @@
 
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= stylesheet_link_tag    'backoffice', media: 'all' %>
-  <%= javascript_include_tag 'application' %>
-  <%= javascript_include_tag 'backoffice' %>
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -47,6 +45,9 @@
      <!-- /#page-wrapper -->
   </div>
   <!-- /#wrapper -->
+
+  <%= javascript_include_tag 'application' %>
+  <%= javascript_include_tag 'backoffice' %>
 
   <% if notice %>
     <script type="text/javascript">

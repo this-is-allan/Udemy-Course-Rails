@@ -31,8 +31,10 @@ gem 'jquery-ui-rails'
 source 'https://rails-assets.org' do
   # The most popular front-end framework for developing responsive, mobile first projects on the web.
   gem 'rails-assets-bootstrap', '3.3.7'
-  # NotifyJS - A simple, versatile notification library
-  gem 'rails-assets-notifyjs'
+  # Bootstrap Notify
+  gem 'rails-assets-bootstrap.growl'
+  # Animate CSS
+  gem 'rails-assets-animate-css'
   # Wrappers for JavaScript alert(), confirm() and other flexible dialogs using Twitter's bootstrap framework for Rails 3.1+
   gem 'rails-assets-bootbox'
 end

@@ -49,16 +49,7 @@
   <%= javascript_include_tag 'application' %>
   <%= javascript_include_tag 'backoffice' %>
 
-  <% if notice %>
-    <script type="text/javascript">
-      $.notify("<%= notice %>", "success");
-    </script>
-  <% end %>
-  <% if alert %>
-    <script type="text/javascript">
-      $.notify("<%= alert %>", "error");
-    </script>
-  <% end %>
+  <%= render partial: 'layouts/shared/notifications' %>
 
 </body>
 

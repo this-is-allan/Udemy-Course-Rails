@@ -73,11 +73,7 @@
 
   <%= yield :javascripts %>
 
-  <% if notice %>
-    <script type="text/javascript">
-      $.notify("<%= notice %>", "success");
-    </script>
-  <% end %>
+  <%= render partial: 'layouts/shared/notifications' %>
 </body>
 
 </html>

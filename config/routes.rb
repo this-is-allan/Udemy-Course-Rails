@@ -16,10 +16,12 @@ Rails.application.routes.draw do
       resources :dashboard, only: [:index]
       resources :ads, only: [:index, :edit, :update, :new, :create]
     end
+
+    resources :ad_detail, only: [:show]
   end
 
   devise_for :admins, :skip => [:registration]
-  devise_for :members
+  devise_for :members, controllers: { sessions: 'members/sessions' }
 
   root 'site/home#index'
 end

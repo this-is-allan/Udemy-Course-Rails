@@ -26,7 +26,8 @@ gem 'money-rails', '~>1'
 gem "paperclip", "~> 5.0.0"
 # jQuery UI for the Rails asset pipeline
 gem 'jquery-ui-rails'
-
+# The safe Markdown parser, reloaded.
+gem 'redcarpet'
 
 source 'https://rails-assets.org' do
   # The most popular front-end framework for developing responsive, mobile first projects on the web.
@@ -37,6 +38,10 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-animate-css'
   # Wrappers for JavaScript alert(), confirm() and other flexible dialogs using Twitter's bootstrap framework for Rails 3.1+
   gem 'rails-assets-bootbox'
+  # Bootstrap Markdown
+  gem 'rails-assets-bootstrap-markdown'
+  # Marked
+  gem 'rails-assets-marked'
 end
 
 
@@ -89,6 +94,8 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   # A library for generating fake data such as names, addresses, and phone numbers.
   gem 'faker'
+  # Markdown Lorem Ipsum generator
+  gem 'doctor_ipsum'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

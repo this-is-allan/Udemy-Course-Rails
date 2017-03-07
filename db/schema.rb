@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170306092528) do
+ActiveRecord::Schema.define(version: 20170307095604) do
 
   create_table "admins", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "email",                  default: "", null: false
@@ -44,6 +44,8 @@ ActiveRecord::Schema.define(version: 20170306092528) do
     t.integer  "picture_file_size"
     t.datetime "picture_updated_at"
     t.date     "finish_date"
+    t.text     "description_short",    limit: 65535
+    t.text     "description_md",       limit: 65535
     t.index ["category_id"], name: "index_ads_on_category_id", using: :btree
     t.index ["member_id"], name: "index_ads_on_member_id", using: :btree
   end

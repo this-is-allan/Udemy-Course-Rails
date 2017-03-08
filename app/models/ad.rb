@@ -14,7 +14,7 @@ class Ad < ApplicationRecord
   # Scopes
   scope :descending_order, ->(quantity = 6) { limit(quantity).order(created_at: :desc) }
   scope :to_the, ->(member) { where(member: member) }
-  scope :where_category, ->(id) { where(category: id) }
+  scope :by_category, ->(id) { where(category: id) }
 
   # gem paperclip
   has_attached_file :picture, styles: { large: "800x300#", medium: "320x150#", thumb: "100x100>" }, default_url: "/images/:style/missing.png"
